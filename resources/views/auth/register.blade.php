@@ -8,7 +8,7 @@
     @csrf
     <div class="container">
       <div class="row vh-100 align-items-center justify-content-center">
-        <div class="col-6">
+        <div class="col-6 card p-5">
            <form>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Indirizzo mail</label>
@@ -33,5 +33,15 @@
       </div>
     </div>
   </form>
+
+  @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+  @endif
 
 </x-layout>
