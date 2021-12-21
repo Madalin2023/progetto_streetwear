@@ -1,7 +1,7 @@
 
 <x-layout>
 
-
+    <x-navbar/>
 
 
 
